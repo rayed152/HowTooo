@@ -5,7 +5,7 @@ import Home1 from "./Home1";
 function Cover({ children }) {
   return (
     <div>
-      <div>
+      <div className="sticky-top">
         <Navbar1 />
       </div>
       <div>
