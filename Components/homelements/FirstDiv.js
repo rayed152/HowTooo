@@ -9,9 +9,6 @@ function FirstDiv() {
 
   return (
     <div>
-      <Head>
-        <link rel="stylesheet" href="/cssfiles/firstdiv.css" />
-      </Head>
       <div className={`d-flex flex-column flex-lg-row ${styles.maindiv}`}>
         <div className="col-lg-2 d-lg-block d-none"></div>
         <div className="d-flex flex-column flex-lg-row align-items-lg-center">

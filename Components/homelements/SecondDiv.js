@@ -2,22 +2,18 @@ import React from "react";
 import Image from "next/image";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
+import styles from "./cssfiles/seconddiv.module.css";
 
 function SecondDiv() {
   return (
     <div style={{ backgroundColor: "#393E46" }}>
-      <div
-        className="text-center pb-4 pt-4"
-        style={{ color: "white", fontSize: "44px" }}
-      >
+      <div className={`text-center pb-4 pt-4 ${styles.header}`}>
         Popular Topics
       </div>
       <div
-        className="d-flex flex-column flex-lg-row justify-content-center"
-        style={{ padding: "3%" }}
+        className={`d-flex flex-column flex-lg-row justify-content-center ${styles.carouselMain}`}
       >
         <div className="col-lg-2 d-lg-block d-none"></div>
-
         <Carousel className="">
           <Carousel.Item>
             <div className="d-flex justify-content-between">
@@ -25,7 +21,7 @@ function SecondDiv() {
                 <Card.Img
                   variant="top"
                   src="/html.jpg"
-                  style={{ width: "300px", height: "200px" }}
+                  className={styles.carouselImage}
                 />
                 <Card.Body>
                   <Card.Title>Card 1</Card.Title>
@@ -36,7 +32,7 @@ function SecondDiv() {
                 <Card.Img
                   variant="top"
                   src="css.jpg"
-                  style={{ width: "300px", height: "200px" }}
+                  className={styles.carouselImage}
                 />
                 <Card.Body>
                   <Card.Title>Card 2</Card.Title>
@@ -47,7 +43,7 @@ function SecondDiv() {
                 <Card.Img
                   variant="top"
                   src="/js.png"
-                  style={{ width: "300px", height: "200px" }}
+                  className={styles.carouselImage}
                 />
                 <Card.Body>
                   <Card.Title>Card 3</Card.Title>
@@ -62,7 +58,7 @@ function SecondDiv() {
                 <Card.Img
                   variant="top"
                   src="/image4.jpg"
-                  style={{ width: "300px", height: "200px" }}
+                  className={styles.carouselImage}
                 />
                 <Card.Body>
                   <Card.Title>Card 4</Card.Title>
@@ -73,7 +69,7 @@ function SecondDiv() {
                 <Card.Img
                   variant="top"
                   src="/image5.jpg"
-                  style={{ width: "300px", height: "200px" }}
+                  className={styles.carouselImage}
                 />
                 <Card.Body>
                   <Card.Title>Card 5</Card.Title>
@@ -84,7 +80,7 @@ function SecondDiv() {
                 <Card.Img
                   variant="top"
                   src="/image6.jpg"
-                  style={{ width: "300px", height: "200px" }}
+                  className={styles.carouselImage}
                 />
                 <Card.Body>
                   <Card.Title>Card 6</Card.Title>

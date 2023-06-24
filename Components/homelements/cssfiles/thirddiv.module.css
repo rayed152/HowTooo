@@ -1,0 +1,23 @@
+.mainDiv{
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background-color: #EEEEEE;
+}
+
+.details{
+    padding-left: 10%;
+    color: #505E86;
+}
+
+.details h1{
+    font-size: 43[x];
+}
+.details p{
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.details Button{
+    background-color: #00ADB5;
+    width: 213px;
+}
