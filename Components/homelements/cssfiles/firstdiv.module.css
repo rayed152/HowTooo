@@ -20,6 +20,7 @@
 .subdiv1 Button{
     width: 362px;
     background-color: #00ADB5;
+    border: black;
 }
 .subdiv2{
     padding-left: 20%;

@@ -2,6 +2,7 @@ import React from "react";
 import SecondDiv from "./homelements/SecondDiv";
 import ThirdDiv from "./homelements/ThirdDiv";
 import FirstDiv from "./homelements/FirstDiv";
+import FourthDiv from "./homelements/FourthDiv";
 
 function Home1() {
   return (
@@ -12,6 +13,8 @@ function Home1() {
       <SecondDiv />
       {/* Third Div */}
       <ThirdDiv />
+      {/* Fouth Div */}
+      <FourthDiv />
     </div>
   );
 }
