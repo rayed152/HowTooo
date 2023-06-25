@@ -3,6 +3,7 @@ import SecondDiv from "./homelements/SecondDiv";
 import ThirdDiv from "./homelements/ThirdDiv";
 import FirstDiv from "./homelements/FirstDiv";
 import FourthDiv from "./homelements/FourthDiv";
+import FifthDiv from "./homelements/FifthDiv";
 
 function Home1() {
   return (
@@ -15,6 +16,8 @@ function Home1() {
       <ThirdDiv />
       {/* Fouth Div */}
       <FourthDiv />
+      {/* Fifth Div */}
+      <FifthDiv />
     </div>
   );
 }

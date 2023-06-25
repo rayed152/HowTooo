@@ -9,9 +9,9 @@ function FirstDiv() {
 
   return (
     <div>
-      <div className={`d-flex flex-column flex-lg-row ${styles.maindiv}`}>
+      <div className={`d-flex  flex-lg-row ${styles.maindiv}`}>
         <div className="col-lg-2 d-lg-block d-none"></div>
-        <div className="d-flex flex-column flex-lg-row align-items-lg-center">
+        <div className="d-flex  flex-lg-row align-items-lg-center">
           <div className={styles.subdiv1}>
             <div style={{ marginLeft: "20%" }}>
               <h1>Want To Learn Coding For Free?</h1>

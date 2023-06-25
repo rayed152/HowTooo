@@ -1,0 +1,33 @@
+.maindiv{
+    padding:5%;
+    background-color: #393E46;
+}
+
+.subdiv1{
+    /* margin-left: 80px ; */
+}
+
+.subdiv1 h1{
+    font-size: 43px;
+    font-weight:bold;
+    color: #505E86;
+}
+
+.subdiv1 p{
+    width: 70%;
+    font-size: 22px;
+    font-weight: lighter;
+    color: white;
+}
+
+
+.subdiv1 Button{
+    width: 70%;
+    background-color: #00ADB5;
+    border: black;
+}
+
+
+.subdiv2{
+    
+}
