@@ -6,8 +6,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "next/image";
 function Navbar1() {
   return (
-    <div>
-      <Navbar expand="lg" style={{ backgroundColor: "#EEEEEE" }}>
+    <div
+      style={{ backgroundColor: "#EEEEEE" }}
+      className="border-bottom border-dark"
+    >
+      <Navbar expand="lg">
         <Container fluid>
           <div className="col-lg-2 d-lg-block d-none"></div>
           <Navbar.Brand href="#">
