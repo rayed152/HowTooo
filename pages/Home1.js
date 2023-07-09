@@ -1,10 +1,10 @@
 import React from "react";
-import SecondDiv from "./homelements/SecondDiv";
-import ThirdDiv from "./homelements/ThirdDiv";
-import FirstDiv from "./homelements/FirstDiv";
-import FourthDiv from "./homelements/FourthDiv";
-import FifthDiv from "./homelements/FifthDiv";
-import Footer from "./homelements/Footer";
+import SecondDiv from "../Components/homelements/SecondDiv";
+import ThirdDiv from "../Components/homelements/ThirdDiv";
+import FirstDiv from "../Components/homelements/FirstDiv";
+import FourthDiv from "../Components/homelements/FourthDiv";
+import FifthDiv from "../Components/homelements/FifthDiv";
+import Footer from "../Components/homelements/Footer";
 
 function Home1() {
   return (

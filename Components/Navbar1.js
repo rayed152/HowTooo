@@ -13,7 +13,7 @@ function Navbar1() {
       <Navbar expand="lg">
         <Container fluid>
           <div className="col-lg-2 d-lg-block d-none"></div>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             <Image src="/logo.png" alt="Logo" width={80} height={100} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -72,8 +72,8 @@ function Navbar1() {
               </NavDropdown>
               <Nav.Link href="#">Contact Us</Nav.Link>
             </Nav>
-            <Nav.Link href="#" className="d-flex">
-              SignIn/SignUp
+            <Nav.Link href="/login" className="d-flex">
+              Login
             </Nav.Link>
           </Navbar.Collapse>
           <div className="col-lg-2 d-lg-block d-none"></div>
