@@ -28,9 +28,6 @@ function Cover({ children }) {
   return (
     <div>
       <div>{children}</div>
-      {/* <div>
-        You are logged in<Button onClick={() => signOut()}>signOut</Button>
-      </div> */}
     </div>
   );
 }
