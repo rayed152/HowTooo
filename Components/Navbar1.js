@@ -4,7 +4,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "next/image";
+import Button from "react-bootstrap/Button";
+import LoginModal from "./LoginModal";
+
 function Navbar1() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <div
       style={{ backgroundColor: "#EEEEEE" }}
@@ -72,8 +76,13 @@ function Navbar1() {
               </NavDropdown>
               <Nav.Link href="#">Contact Us</Nav.Link>
             </Nav>
-            <Nav.Link href="/login" className="d-flex">
-              Login
+
+            {/* Mondal */}
+            <Nav.Link href="#" className="d-flex">
+              <Button variant="primary" onClick={() => setModalShow(true)}>
+                Log In
+              </Button>
+              <LoginModal show={modalShow} onHide={() => setModalShow(false)} />
             </Nav.Link>
           </Navbar.Collapse>
           <div className="col-lg-2 d-lg-block d-none"></div>
