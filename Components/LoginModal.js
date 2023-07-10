@@ -11,6 +11,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { signIn } from "next-auth/react";
+import styles from "./loginmondal.module.css";
 
 function LoginModal(props) {
   const handleLogin = async () => {
@@ -25,27 +26,38 @@ function LoginModal(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Body className="d-flex flex-column align-items-center border border-dark rounded">
+        <Modal.Body
+          className={`d-flex flex-column align-items-center  ${styles.mondalbody}`}
+        >
           <div className="p-4">
-            <Image src="/logo.png" alt="logo" width={300} height={100} />
+            <Image src="/logo.png" alt="logo" width={180} height={100} />
           </div>
-          <Form className="p-4">
-            <Form.Group>
+          <div>
+            <p>Don’t Waste Anymore Time And Dive In</p>
+          </div>
+
+          <Form className={`p-4 ${styles.form}`}>
+            <Form.Group className={`${styles.formgroup}`}>
               <Form.Label>Email Address</Form.Label>
               <Form.Control type="email" placeholder="Enter Email" />
             </Form.Group>
-            <Form.Group>
+            <Form.Group className={`${styles.formgroup}`}>
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Enter Password" />
-              <Form.Text>Forgot Password?</Form.Text>
+              <Form.Text className={`${styles.formtext}`}>
+                Forgot Password?
+              </Form.Text>
             </Form.Group>
-            <Button>Log In</Button>
+            <Button className={`${styles.button}`}>Log In</Button>
           </Form>
-          <div className="p-4">
-            <div>
+          <div
+            className="pt-4 border-top border-dark w-50"
+            style={{ marginRight: "30px" }}
+          >
+            <div className="text-center">
               <p>Or Log In With</p>
             </div>
-            <div className="d-flex">
+            <div className="d-flex justify-content-center align-item-center">
               <button
                 className="btn btn-light"
                 style={{ marginRight: "0.5rem" }}
@@ -71,6 +83,11 @@ function LoginModal(props) {
               >
                 <FontAwesomeIcon icon={faGithub} />
               </button>
+            </div>
+            <div className="text-center mt-">
+              <p>
+                Don't Have An Account? <span>Sign Up.</span>
+              </p>
             </div>
           </div>
         </Modal.Body>

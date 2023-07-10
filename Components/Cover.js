@@ -1,8 +1,7 @@
 import React from "react";
-import Navbar1 from "./Navbar1";
+import Navbar1 from "./navbars/Navbar1";
 import Home1 from "../pages/Home1";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { Button } from "react-bootstrap";
+import { useSession } from "next-auth/react";
 
 function Cover({ children }) {
   {

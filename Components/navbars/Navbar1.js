@@ -5,10 +5,15 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "next/image";
 import Button from "react-bootstrap/Button";
-import LoginModal from "./LoginModal";
+import LoginModal from "../LoginModal";
+import { useSession } from "next-auth/react";
+import { signOut } from "next-auth/react";
+import styles from "./navbar.module.css";
 
 function Navbar1() {
   const [modalShow, setModalShow] = React.useState(false);
+  const { data: session } = useSession();
+
   return (
     <div
       style={{ backgroundColor: "#EEEEEE" }}
@@ -77,13 +82,45 @@ function Navbar1() {
               <Nav.Link href="#">Contact Us</Nav.Link>
             </Nav>
 
-            {/* Mondal */}
-            <Nav.Link href="#" className="d-flex">
-              <Button variant="primary" onClick={() => setModalShow(true)}>
-                Log In
-              </Button>
-              <LoginModal show={modalShow} onHide={() => setModalShow(false)} />
-            </Nav.Link>
+            {/* Modal */}
+            {!session ? (
+              <Nav.Link href="#" className="d-flex">
+                <Button variant="primary" onClick={() => setModalShow(true)}>
+                  Log In
+                </Button>
+                <LoginModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
+              </Nav.Link>
+            ) : (
+              <div className={`${styles.userMainDiv}`}>
+                <div>
+                  <Image
+                    src={session.user.image}
+                    alt="Profile Picture"
+                    width={32}
+                    height={32}
+                    className="rounded-circle"
+                    style={{ marginRight: "10px" }}
+                  />
+                </div>
+
+                <NavDropdown
+                  title={session.user.name}
+                  id="navbarScrollingDropdown"
+                  // className={`${styles.customnavdropdown}`}
+                  style={{ marginTop: "3px", backgroundColor: "#EEEEEE" }}
+                >
+                  <NavDropdown.Item href="#action1">Profile</NavDropdown.Item>
+                  <NavDropdown.Item href="#action2">Settings</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item>
+                    <Button onClick={() => signOut()}>Log Out</Button>
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </div>
+            )}
           </Navbar.Collapse>
           <div className="col-lg-2 d-lg-block d-none"></div>
         </Container>

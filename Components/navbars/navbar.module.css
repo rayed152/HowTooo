@@ -1,0 +1,9 @@
+.userMainDiv{
+  display: flex;
+}
+
+.customnavdropdown .dropdown-menu {
+  background-color: #eeeeee !important;
+  margin-top: 3px;
+}
+
