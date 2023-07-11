@@ -9,6 +9,8 @@ import LoginModal from "../LoginModal";
 import { useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
 import styles from "./navbar.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SearchMondal from "./SearchMondal";
 
 function Navbar1() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -35,7 +37,7 @@ function Navbar1() {
               <NavDropdown
                 title="Courses"
                 id="navbarScrollingDropdown"
-                style={{ color: "#505E86" }}
+                className={`${styles.navitems}`}
               >
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
@@ -47,7 +49,11 @@ function Navbar1() {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Documentations" id="navbarScrollingDropdown">
+              <NavDropdown
+                title="Documentations"
+                id="navbarScrollingDropdown"
+                className={`${styles.navitems}`}
+              >
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
                   Another action
@@ -58,7 +64,11 @@ function Navbar1() {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Community" id="navbarScrollingDropdown">
+              <NavDropdown
+                title="Community"
+                id="navbarScrollingDropdown"
+                className={`${styles.navitems}`}
+              >
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
                   Another action
@@ -69,7 +79,11 @@ function Navbar1() {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Premium" id="navbarScrollingDropdown">
+              <NavDropdown
+                title="Premium"
+                id="navbarScrollingDropdown"
+                className={`${styles.navitems}`}
+              >
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
                   Another action
@@ -79,15 +93,21 @@ function Navbar1() {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#">Contact Us</Nav.Link>
+              <Nav.Link href="#" className={`${styles.navitems}`}>
+                Contact Us
+              </Nav.Link>
             </Nav>
+
+            <div className={`${styles.search}`}>
+              <SearchMondal />
+            </div>
 
             {/* Modal */}
             {!session ? (
-              <Nav.Link href="#" className="d-flex">
-                <Button variant="primary" onClick={() => setModalShow(true)}>
+              <Nav.Link href="#" className={`${styles.navitems} d-flex`}>
+                <button variant="primary" onClick={() => setModalShow(true)}>
                   Log In
-                </Button>
+                </button>
                 <LoginModal
                   show={modalShow}
                   onHide={() => setModalShow(false)}

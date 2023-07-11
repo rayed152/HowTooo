@@ -2,8 +2,35 @@
   display: flex;
 }
 
+.navitems{
+  font-family: montserrat;
+}
+
+.navitems:hover{
+  border: 2px outset black;
+  background-color: #d9d9e0;
+}
+
+.navitems button{
+  padding: 6px 20px;
+  border: 2px inset black;
+}
+
+
 .customnavdropdown .dropdown-menu {
   background-color: #eeeeee !important;
   margin-top: 3px;
+}
+
+.search{
+  padding: 6px;
+  margin-right: 10px;
+  border-right: 1px solid;
+}
+
+.search:hover{
+  border: 2px outset black;
+  padding: 6px 10px;
+  background-color: #d9d9e0;
 }
 

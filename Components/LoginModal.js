@@ -26,8 +26,12 @@ function LoginModal(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
+        <Modal.Header
+          closeButton
+          style={{ backgroundColor: "#EEEEEE" }}
+        ></Modal.Header>
         <Modal.Body
-          className={`d-flex flex-column align-items-center  ${styles.mondalbody}`}
+          className={`d-flex flex-column align-items-center ${styles.mondalbody}`}
         >
           <div className="p-4">
             <Image src="/logo.png" alt="logo" width={180} height={100} />
@@ -84,7 +88,7 @@ function LoginModal(props) {
                 <FontAwesomeIcon icon={faGithub} />
               </button>
             </div>
-            <div className="text-center mt-">
+            <div className="text-center mt-3">
               <p>
                 Don't Have An Account? <span>Sign Up.</span>
               </p>
