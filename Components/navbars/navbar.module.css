@@ -1,0 +1,36 @@
+.userMainDiv{
+  display: flex;
+}
+
+.navitems{
+  font-family: montserrat;
+}
+
+.navitems:hover{
+  border: 2px outset black;
+  background-color: #d9d9e0;
+}
+
+.navitems button{
+  padding: 6px 20px;
+  border: 2px inset black;
+}
+
+
+.customnavdropdown .dropdown-menu {
+  background-color: #eeeeee !important;
+  margin-top: 3px;
+}
+
+.searchDropdownMenu {
+  width: 300px;
+}
+
+
+
+
+
+
+
+
+

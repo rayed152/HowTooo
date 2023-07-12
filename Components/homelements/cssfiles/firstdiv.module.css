@@ -3,6 +3,7 @@
     padding-left: 5%;
     background-color: #EEEEEE;
     padding-bottom: 2%;
+    font-family: montserrat;
 }
 .subdiv1{
     width: 40%;
@@ -10,7 +11,7 @@
 }
 .subdiv1 h1{
     font-size: 43px;
-    color:#505E86
+    color:#505E86;
 }
 .subdiv1 p{
     font-size: 22px;
@@ -22,6 +23,13 @@
     background-color: #00ADB5;
     border: black;
 }
+
+.subdiv1 Button:hover{
+    color: black;
+    border: 2px solid black;
+    background-color: #d9d9e0;
+}
+
 .subdiv2{
     padding-left: 20%;
 }

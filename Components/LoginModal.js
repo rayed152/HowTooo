@@ -1,0 +1,103 @@
+import React from "react";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Image from "next/image";
+import { Form } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faGithub,
+  faGoogle,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { signIn } from "next-auth/react";
+import styles from "./loginmondal.module.css";
+
+function LoginModal(props) {
+  const handleLogin = async () => {
+    await signIn("google", { callbackUrl: "/" });
+  };
+
+  return (
+    <div className="d-flex">
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header
+          closeButton
+          style={{ backgroundColor: "#EEEEEE" }}
+        ></Modal.Header>
+        <Modal.Body
+          className={`d-flex flex-column align-items-center ${styles.mondalbody}`}
+        >
+          <div className="p-4">
+            <Image src="/logo.png" alt="logo" width={180} height={100} />
+          </div>
+          <div>
+            <p>Don’t Waste Anymore Time And Dive In</p>
+          </div>
+
+          <Form className={`p-4 ${styles.form}`}>
+            <Form.Group className={`${styles.formgroup}`}>
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control type="email" placeholder="Enter Email" />
+            </Form.Group>
+            <Form.Group className={`${styles.formgroup}`}>
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Enter Password" />
+              <Form.Text className={`${styles.formtext}`}>
+                Forgot Password?
+              </Form.Text>
+            </Form.Group>
+            <Button className={`${styles.button}`}>Log In</Button>
+          </Form>
+          <div
+            className="pt-4 border-top border-dark w-50"
+            style={{ marginRight: "30px" }}
+          >
+            <div className="text-center">
+              <p>Or Log In With</p>
+            </div>
+            <div className="d-flex justify-content-center align-item-center">
+              <button
+                className="btn btn-light"
+                style={{ marginRight: "0.5rem" }}
+                onClick={handleLogin}
+              >
+                <FontAwesomeIcon icon={faGoogle} />
+              </button>
+              <button
+                className="btn btn-light"
+                style={{ marginRight: "0.5rem" }}
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </button>
+              <button
+                className="btn btn-light"
+                style={{ marginRight: "0.5rem" }}
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </button>
+              <button
+                className="btn btn-light"
+                style={{ marginRight: "0.5rem" }}
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </button>
+            </div>
+            <div className="text-center mt-3">
+              <p>
+                Don't Have An Account? <span>Sign Up.</span>
+              </p>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
+    </div>
+  );
+}
+
+export default LoginModal;
