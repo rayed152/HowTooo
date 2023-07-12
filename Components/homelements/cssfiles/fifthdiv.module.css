@@ -1,33 +1,37 @@
-.maindiv{
-    padding:5%;
-    background-color: #393E46;
+.maindiv {
+  padding: 5%;
+  background-color: #393e46;
+  font-family: montserral;
 }
 
-.subdiv1{
-    /* margin-left: 80px ; */
+.subdiv1 {
+  /* margin-left: 80px ; */
 }
 
-.subdiv1 h1{
-    font-size: 43px;
-    font-weight:bold;
-    color: #505E86;
+.subdiv1 h1 {
+  font-size: 43px;
+  font-weight: bold;
+  color: #505e86;
 }
 
-.subdiv1 p{
-    width: 70%;
-    font-size: 22px;
-    font-weight: lighter;
-    color: white;
+.subdiv1 p {
+  width: 70%;
+  font-size: 22px;
+  font-weight: lighter;
+  color: white;
 }
 
-
-.subdiv1 Button{
-    width: 70%;
-    background-color: #00ADB5;
-    border: black;
+.subdiv1 Button {
+  width: 70%;
+  background-color: #00adb5;
+  border: black;
 }
 
+.subdiv1 Button:hover {
+  color: black;
+  border: 2px solid black;
+  background-color: #d9d9e0;
+}
 
-.subdiv2{
-    
+.subdiv2 {
 }

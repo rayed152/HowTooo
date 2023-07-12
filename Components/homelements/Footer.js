@@ -1,11 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import styles from "./cssfiles/footer.module.css";
 
 function Footer() {
   return (
-    <div>
-      <div className="d-flex  flex-lg-row ">
+    <div className={`${styles.maindiv}`}>
+      <div className={`d-flex  flex-lg-row`}>
         <div className="col-lg-2 d-lg-block d-none"></div>
         <div
           className="p-4 border-bottom border-dark"

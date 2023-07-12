@@ -1,24 +1,31 @@
-.mainDiv{
-    padding-top: 5%;
-    padding-bottom: 2%;
-    background-color: #EEEEEE;
+.mainDiv {
+  padding-top: 5%;
+  padding-bottom: 2%;
+  background-color: #eeeeee;
+  font-family: montserral;
 }
 
-.details{
-    padding-left: 10%;
-    color: #505E86;
+.details {
+  padding-left: 10%;
+  color: #505e86;
 }
 
-.details h1{
-    font-size: 43[x];
+.details h1 {
+  font-size: 43[x];
 }
-.details p{
-    font-size: 22px;
-    font-weight: lighter;
+.details p {
+  font-size: 22px;
+  font-weight: lighter;
 }
 
-.details Button{
-    background-color: #00ADB5;
-    width: 213px;
-    border: black;
+.details Button {
+  background-color: #00adb5;
+  width: 213px;
+  border: black;
+}
+
+.details Button:hover {
+  color: black;
+  border: 2px solid black;
+  background-color: #d9d9e0;
 }

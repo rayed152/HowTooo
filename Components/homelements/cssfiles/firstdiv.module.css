@@ -1,42 +1,41 @@
-.maindiv{
-    padding-top: 5%;
-    padding-left: 5%;
-    background-color: #EEEEEE;
-    padding-bottom: 2%;
-    font-family: montserrat;
+.maindiv {
+  padding-top: 5%;
+  padding-left: 5%;
+  background-color: #eeeeee;
+  padding-bottom: 2%;
+  font-family: montserrat;
 }
-.subdiv1{
-    width: 40%;
-    margin-bottom: 20px;
+.subdiv1 {
+  width: 40%;
+  margin-bottom: 20px;
 }
-.subdiv1 h1{
-    font-size: 43px;
-    color:#505E86;
+.subdiv1 h1 {
+  font-size: 43px;
+  color: #505e86;
 }
-.subdiv1 p{
-    font-size: 22px;
-    font-weight: 300;
-    color: #505E86;
+.subdiv1 p {
+  font-size: 22px;
+  font-weight: 300;
+  color: #505e86;
 }
-.subdiv1 Button{
-    width: 362px;
-    background-color: #00ADB5;
-    border: black;
-}
-
-.subdiv1 Button:hover{
-    color: black;
-    border: 2px solid black;
-    background-color: #d9d9e0;
+.subdiv1 Button {
+  width: 362px;
+  background-color: #00adb5;
+  border: black;
 }
 
-.subdiv2{
-    padding-left: 20%;
+.subdiv1 Button:hover {
+  color: black;
+  border: 2px solid black;
+  background-color: #d9d9e0;
+}
+
+.subdiv2 {
+  padding-left: 20%;
 }
 
 .subdiv2.hovered {
-    /* Styles for the image container during hover */
-    transform: scale(1.1); /* Increase the scale of the image */
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-  }
-
+  /* Styles for the image container during hover */
+  transform: scale(1.1); /* Increase the scale of the image */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}

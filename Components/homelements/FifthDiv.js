@@ -16,7 +16,7 @@ function FifthDiv() {
             that first glorious step towards your epic goal? Trust me, it'll be
             an adventure worth embarking on!
           </p>
-          <Button>Sign UP</Button>
+          <Button>Sign Up</Button>
         </div>
         <div className={`${styles.subdiv2}  order-lg-2 order-sm-1`}>
           <Image src="/div5.png" width={2000} height={200} />

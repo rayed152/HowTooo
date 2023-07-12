@@ -1,25 +1,32 @@
-.maindiv{
-    padding: 2%;
-    background-color: #929292;
-    /* color: #505E86; */
-    color: white;
+.maindiv {
+  padding: 2%;
+  background-color: #929292;
+  /* color: #505E86; */
+  color: white;
+  font-family: montserral;
 }
 
-.maindiv h1{
-    font-size: 50px;
+.maindiv h1 {
+  font-size: 50px;
 }
 
-.subdiv1{
-    margin-left: 50px;
-    padding: 5%;
+.subdiv1 {
+  margin-left: 50px;
+  padding: 5%;
 }
 
-.subdiv1 Button{
-    background-color: #00ADB5;
-    width: 350px;
-    border: black;
+.subdiv1 Button {
+  background-color: #00adb5;
+  width: 350px;
+  border: black;
 }
 
-.subdiv2{
-    padding-left: 10%;
+.subdiv1 Button:hover {
+  color: black;
+  border: 2px solid black;
+  background-color: #d9d9e0;
+}
+
+.subdiv2 {
+  padding-left: 10%;
 }
