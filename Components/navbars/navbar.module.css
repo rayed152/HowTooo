@@ -22,15 +22,15 @@
   margin-top: 3px;
 }
 
-.search{
-  padding: 6px;
-  margin-right: 10px;
-  border-right: 1px solid;
+.searchDropdownMenu {
+  width: 300px;
 }
 
-.search:hover{
-  border: 2px outset black;
-  padding: 6px 10px;
-  background-color: #d9d9e0;
-}
+
+
+
+
+
+
+
 

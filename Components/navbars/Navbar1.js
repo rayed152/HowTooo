@@ -9,7 +9,6 @@ import LoginModal from "../LoginModal";
 import { useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
 import styles from "./navbar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchMondal from "./SearchMondal";
 
 function Navbar1() {

@@ -1,29 +1,28 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import Offcanvas from "react-bootstrap/Offcanvas";
+import { Dropdown, Form } from "react-bootstrap";
+import React from "react";
+import styles from "./navbar.module.css";
 
 function SearchMondal() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <div>
-      <button onClick={handleShow}>
-        {" "}
-        {/* Add onClick event handler */}
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </button>
-      <Offcanvas show={show} onHide={handleClose} placement="bottom">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as a placeholder. In real life, you can have the elements
-          you have chosen, like text, images, lists, etc.
-        </Offcanvas.Body>
-      </Offcanvas>
+      <Dropdown>
+        <Dropdown.Toggle variant="transparent" id="search-dropdown-toggle">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </Dropdown.Toggle>
+        <Dropdown.Menu className={`${styles.searchDropdownMenu}`}>
+          <Form className="px-3 py-2">
+            <Form.Group className="mb-3" controlId="searchForm">
+              <Form.Control
+                type="text"
+                placeholder="Search"
+                className={`${styles.searchInput}`}
+              />
+            </Form.Group>
+          </Form>
+        </Dropdown.Menu>
+      </Dropdown>
     </div>
   );
 }
