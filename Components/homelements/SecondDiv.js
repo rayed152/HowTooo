@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import Carousel from "react-bootstrap/Carousel";
-import Card from "react-bootstrap/Card";
 import styles from "./cssfiles/seconddiv.module.css";
+import { Nav, Tab, Card, Button } from "react-bootstrap";
 
 function SecondDiv() {
   return (
@@ -10,87 +8,147 @@ function SecondDiv() {
       <div className={`text-center pb-4 pt-4 ${styles.header}`}>
         Popular Topics
       </div>
-      <div
-        className={`d-flex flex-column flex-lg-row justify-content-center ${styles.carouselMain}`}
-      >
-        <div className="col-lg-2 d-lg-block d-none"></div>
-        <Carousel className="">
-          <Carousel.Item>
-            <div className="d-flex justify-content-between">
-              <Card style={{ marginRight: "20px" }}>
-                <Card.Img
-                  variant="top"
-                  src="/html.jpg"
-                  className={styles.carouselImage}
-                />
-                <Card.Body>
-                  <Card.Title>Card 1</Card.Title>
-                  <Card.Text>Card 1 content goes here.</Card.Text>
-                </Card.Body>
-              </Card>
-              <Card style={{ marginRight: "20px" }}>
-                <Card.Img
-                  variant="top"
-                  src="css.jpg"
-                  className={styles.carouselImage}
-                />
-                <Card.Body>
-                  <Card.Title>Card 2</Card.Title>
-                  <Card.Text>Card 2 content goes here.</Card.Text>
-                </Card.Body>
-              </Card>
-              <Card style={{ marginRight: "20px" }}>
-                <Card.Img
-                  variant="top"
-                  src="/js.png"
-                  className={styles.carouselImage}
-                />
-                <Card.Body>
-                  <Card.Title>Card 3</Card.Title>
-                  <Card.Text>Card 3 content goes here.</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="d-flex justify-content-between">
-              <Card style={{ marginRight: "20px" }}>
-                <Card.Img
-                  variant="top"
-                  src="/image4.jpg"
-                  className={styles.carouselImage}
-                />
-                <Card.Body>
-                  <Card.Title>Card 4</Card.Title>
-                  <Card.Text>Card 4 content goes here.</Card.Text>
-                </Card.Body>
-              </Card>
-              <Card style={{ marginRight: "20px" }}>
-                <Card.Img
-                  variant="top"
-                  src="/image5.jpg"
-                  className={styles.carouselImage}
-                />
-                <Card.Body>
-                  <Card.Title>Card 5</Card.Title>
-                  <Card.Text>Card 5 content goes here.</Card.Text>
-                </Card.Body>
-              </Card>
-              <Card style={{ marginRight: "20px" }}>
-                <Card.Img
-                  variant="top"
-                  src="/image6.jpg"
-                  className={styles.carouselImage}
-                />
-                <Card.Body>
-                  <Card.Title>Card 6</Card.Title>
-                  <Card.Text>Card 6 content goes here.</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </Carousel.Item>
-        </Carousel>
-        <div className="col-lg-2 d-lg-block d-none"></div>
+
+      <div className={`${styles.main}`}>
+        <Tab.Container defaultActiveKey="#card1">
+          <div className="d-flex flex-lg-row justify-content-center">
+            <div className="col-lg-2 d-lg-block d-none"></div>
+            <Nav
+              variant="tabs"
+              className="justify-content-center"
+              style={{ width: "70%" }}
+            >
+              <Nav.Item>
+                <Nav.Link eventKey="#card1">Card1</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="#card2">Card2</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="#card3">Card3</Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <div className="col-lg-2 d-lg-block d-none"></div>
+          </div>
+
+          <Tab.Content className="d-flex flex-lg-row justify-content-center">
+            <div className="col-lg-2 d-lg-block d-none"></div>
+            <Tab.Pane eventKey="#card1">
+              <div id="card1" className="mt-4">
+                <h3>Card1 Content</h3>
+                <div className="row">
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 1 - Item 1</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 1 - Item 1.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 1 - Item 2</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 1 - Item 2.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 1 - Item 3</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 1 - Item 3.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+            </Tab.Pane>
+
+            <Tab.Pane eventKey="#card2">
+              <div id="card2" className="mt-4">
+                <h3>Card2 Content</h3>
+                <div className="row">
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 2 - Item 1</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 2 - Item 1.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 2 - Item 2</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 2 - Item 2.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 2 - Item 3</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 2 - Item 3.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+            </Tab.Pane>
+
+            <Tab.Pane eventKey="#card3">
+              <div id="card3" className="mt-4">
+                <h3>Card3 Content</h3>
+                <div className="row">
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 3 - Item 1</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 3 - Item 1.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 3 - Item 2</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 3 - Item 2.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="col-md-4">
+                    <Card className={`${styles.cards}`}>
+                      <Card.Body>
+                        <Card.Title>Card 3 - Item 3</Card.Title>
+                        <Card.Text>
+                          This is the content for Card 3 - Item 3.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+            </Tab.Pane>
+            <div className="col-lg-2 d-lg-block d-none"></div>
+          </Tab.Content>
+        </Tab.Container>
       </div>
     </div>
   );
