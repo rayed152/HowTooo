@@ -135,7 +135,12 @@ function Navbar1() {
                   <NavDropdown.Item href="#action2">Settings</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
-                    <Button onClick={() => signOut()}>Log Out</Button>
+                    <Button
+                      className={`${styles.signout}`}
+                      onClick={() => signOut()}
+                    >
+                      Log Out
+                    </Button>
                   </NavDropdown.Item>
                 </NavDropdown>
               </div>
