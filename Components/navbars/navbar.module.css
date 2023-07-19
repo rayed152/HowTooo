@@ -6,6 +6,7 @@
   font-family: montserrat;
 }
 
+
 .navitems:hover {
   border: 2px outset black;
   background-color: #d9d9e0;
@@ -15,6 +16,17 @@
   padding: 6px 20px;
   border: 2px inset black;
 }
+
+.navToggle{
+  background: transparent !important; 
+  border: 0 !important;
+  color: black !important;
+}
+
+.navDropMenu{
+  background-color: #EEEEEE;
+}
+
 
 .customnavdropdown .dropdown-menu {
   margin-top: 3px;

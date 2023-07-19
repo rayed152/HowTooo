@@ -1,8 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "next/image";
 import Button from "react-bootstrap/Button";
 import LoginModal from "../LoginModal";
@@ -10,6 +6,16 @@ import { useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
 import styles from "./navbar.module.css";
 import SearchMondal from "./SearchMondal";
+import {
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "react-bootstrap";
 
 function Navbar1() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -27,81 +33,109 @@ function Navbar1() {
             <Image src="/logo.png" alt="Logo" width={80} height={100} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
+
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0 ms-auto"
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <NavDropdown
-                title="Courses"
-                id="navbarScrollingDropdown"
-                className={`${styles.navitems}`}
-              >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
+              {/* Catalog */}
+              <Dropdown className={`${styles.navitems}`}>
+                <DropdownToggle
+                  id="dropdown-basic"
+                  className={`${styles.navToggle}`}
+                >
+                  Catalog
+                </DropdownToggle>
+                <DropdownMenu className={`${styles.navDropMenu}`}>
+                  <DropdownItem>Courses</DropdownItem>
+                  <DropdownItem>Web Development</DropdownItem>
+                  <DropdownItem>Machine Learning</DropdownItem>
+                  <DropdownItem>Data Science</DropdownItem>
+                  <DropdownItem>Cyber Security</DropdownItem>
+                  <NavDropdown.Divider />
+                  <div>
+                    <h6>Career Paths</h6>
+                  </div>
+                  <DropdownItem>Full Stack Engineer</DropdownItem>
+                  <DropdownItem>Full Stack FrontEnd Engineer</DropdownItem>
+                  <DropdownItem>Full Stack BackEnd Engineer</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
 
-              <NavDropdown
-                title="Documentations"
-                id="navbarScrollingDropdown"
-                className={`${styles.navitems}`}
-              >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
+              {/* Resources */}
+              <Dropdown className={`${styles.navitems}`}>
+                <DropdownToggle
+                  id="dropdown-basic"
+                  className={`${styles.navToggle}`}
+                >
+                  Resources
+                </DropdownToggle>
+                <DropdownMenu className={`${styles.navDropMenu}`}>
+                  <DropdownItem>Docs</DropdownItem>
+                  <DropdownItem>Web Development</DropdownItem>
+                  <DropdownItem>Machine Learning</DropdownItem>
+                  <DropdownItem>Data Science</DropdownItem>
+                  <DropdownItem>Cyber Security</DropdownItem>
+                  <NavDropdown.Divider />
+                  <div>
+                    <h6>Practices</h6>
+                  </div>
+                  <DropdownItem>Projects</DropdownItem>
+                  <DropdownItem>Code Challanges</DropdownItem>
+                  <DropdownItem>Videos</DropdownItem>
+                  <NavDropdown.Divider />
+                  <div>
+                    <h6>Inspirations</h6>
+                  </div>
+                  <DropdownItem>Articles</DropdownItem>
+                  <DropdownItem>Career Advice</DropdownItem>
+                  <DropdownItem>Learning Tips</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
 
-              <NavDropdown
-                title="Community"
-                id="navbarScrollingDropdown"
-                className={`${styles.navitems}`}
-              >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
+              {/* Community */}
+              <Dropdown className={`${styles.navitems}`}>
+                <DropdownToggle
+                  id="dropdown-basic"
+                  className={`${styles.navToggle}`}
+                >
+                  Community
+                </DropdownToggle>
+                <DropdownMenu className={`${styles.navDropMenu}`}>
+                  <DropdownItem>Forums</DropdownItem>
+                  <DropdownItem>Discord</DropdownItem>
+                  <DropdownItem>Team</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
 
-              <NavDropdown
-                title="Premium"
-                id="navbarScrollingDropdown"
-                className={`${styles.navitems}`}
-              >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
+              {/* Premium */}
+
+              <Dropdown className={`${styles.navitems}`}>
+                <DropdownToggle
+                  id="dropdown-basic"
+                  className={`${styles.navToggle}`}
+                >
+                  Premium
+                </DropdownToggle>
+                <DropdownMenu className={`${styles.navDropMenu}`}>
+                  <DropdownItem>For Individual</DropdownItem>
+                  <DropdownItem>For Students</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
               <Nav.Link href="#" className={`${styles.navitems}`}>
                 Contact Us
               </Nav.Link>
             </Nav>
 
+            {/* Search */}
+
             <div className={`${styles.search}`}>
               <SearchMondal />
             </div>
 
-            {/* Modal */}
+            {/* Login Modal */}
             {!session ? (
               <Nav.Link href="#" className={`${styles.navitems} d-flex`}>
                 <button variant="primary" onClick={() => setModalShow(true)}>
