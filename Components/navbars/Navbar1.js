@@ -103,7 +103,7 @@ function Navbar1() {
                 >
                   Community
                 </DropdownToggle>
-                <DropdownMenu className={`${styles.navDropMenu}`}>
+                <DropdownMenu className={`${styles.navDropMenuNoWidth}`}>
                   <DropdownItem>Forums</DropdownItem>
                   <DropdownItem>Discord</DropdownItem>
                   <DropdownItem>Team</DropdownItem>
@@ -119,7 +119,7 @@ function Navbar1() {
                 >
                   Premium
                 </DropdownToggle>
-                <DropdownMenu className={`${styles.navDropMenu}`}>
+                <DropdownMenu className={`${styles.navDropMenuNoWidth}`}>
                   <DropdownItem>For Individual</DropdownItem>
                   <DropdownItem>For Students</DropdownItem>
                 </DropdownMenu>
@@ -165,7 +165,7 @@ function Navbar1() {
                   // className={`${styles.customnavdropdown}`}
                   style={{ marginTop: "3px", backgroundColor: "#EEEEEE" }}
                 >
-                  <NavDropdown.Item href="#action1">Profile</NavDropdown.Item>
+                  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                   <NavDropdown.Item href="#action2">Settings</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item>

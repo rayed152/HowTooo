@@ -4,6 +4,8 @@
 
 .navitems {
   font-family: montserrat;
+  color: #505e86;
+
 }
 
 
@@ -20,11 +22,22 @@
 .navToggle{
   background: transparent !important; 
   border: 0 !important;
-  color: black !important;
+  color: #505e86 !important;
+  font-style: bold;
 }
 
 .navDropMenu{
   background-color: #EEEEEE;
+  width: 400px;
+}
+
+.navDropMenu h6{
+  text-align: center;
+}
+
+.navDropMenuNoWidth{
+  background-color: #EEEEEE;
+  
 }
 
 
