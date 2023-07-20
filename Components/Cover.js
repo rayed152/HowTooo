@@ -4,10 +4,14 @@ import Home1 from "../pages/Home1";
 import { useSession } from "next-auth/react";
 
 function Cover({ children }) {
-  {
-    /* Before Login */
+  const { data: session, status } = useSession();
+
+  // If the session data is loading, show a loading screen
+  if (status === "loading") {
+    return <div>Loading...</div>;
   }
-  const { data: session } = useSession();
+
+  // If there is no session (user not logged in)
   if (!session) {
     return (
       <div>
@@ -21,9 +25,7 @@ function Cover({ children }) {
     );
   }
 
-  {
-    /* After Login */
-  }
+  // After Login
   return (
     <div>
       <div>{children}</div>
