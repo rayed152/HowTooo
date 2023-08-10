@@ -165,7 +165,9 @@ function Navbar1() {
                   // className={`${styles.customnavdropdown}`}
                   style={{ marginTop: "3px", backgroundColor: "#EEEEEE" }}
                 >
-                  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                  <NavDropdown.Item href="/userprofile">
+                    Profile
+                  </NavDropdown.Item>
                   <NavDropdown.Item href="#action2">Settings</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
