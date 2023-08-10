@@ -50,10 +50,18 @@ function Navbar1() {
                 </DropdownToggle>
                 <DropdownMenu className={`${styles.navDropMenu}`}>
                   <DropdownItem>Courses</DropdownItem>
+                  <NavDropdown.Divider />
+                  <div>
+                    <h6>Popular Courses</h6>
+                  </div>
+
                   <DropdownItem>Web Development</DropdownItem>
                   <DropdownItem>Machine Learning</DropdownItem>
                   <DropdownItem>Data Science</DropdownItem>
                   <DropdownItem>Cyber Security</DropdownItem>
+                  <DropdownItem>Accounting (ACT)</DropdownItem>
+                  <DropdownItem>Business Analytics (BA)</DropdownItem>
+                  <DropdownItem>Finance (FIN)</DropdownItem>
                   <NavDropdown.Divider />
                   <div>
                     <h6>Career Paths</h6>
@@ -61,6 +69,7 @@ function Navbar1() {
                   <DropdownItem>Full Stack Engineer</DropdownItem>
                   <DropdownItem>Full Stack FrontEnd Engineer</DropdownItem>
                   <DropdownItem>Full Stack BackEnd Engineer</DropdownItem>
+                  <DropdownItem>Business Related Path</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
 
@@ -74,10 +83,6 @@ function Navbar1() {
                 </DropdownToggle>
                 <DropdownMenu className={`${styles.navDropMenu}`}>
                   <DropdownItem>Docs</DropdownItem>
-                  <DropdownItem>Web Development</DropdownItem>
-                  <DropdownItem>Machine Learning</DropdownItem>
-                  <DropdownItem>Data Science</DropdownItem>
-                  <DropdownItem>Cyber Security</DropdownItem>
                   <NavDropdown.Divider />
                   <div>
                     <h6>Practices</h6>

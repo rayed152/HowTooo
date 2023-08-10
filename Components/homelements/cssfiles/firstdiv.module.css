@@ -36,6 +36,6 @@
 
 .subdiv2.hovered {
   /* Styles for the image container during hover */
-  transform: scale(1.1); /* Increase the scale of the image */
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  transform: scale(1); /* Increase the scale of the image */
+  transition: transform 0.4s ease; /* Add a smooth transition effect */
 }

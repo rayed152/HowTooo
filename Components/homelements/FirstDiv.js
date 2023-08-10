@@ -14,10 +14,10 @@ function FirstDiv() {
         <div className="d-flex  flex-lg-row align-items-lg-center">
           <div className={styles.subdiv1}>
             <div style={{ marginLeft: "20%" }}>
-              <h1>Want To Learn Coding For Free?</h1>
+              <h1>Want To Learn For Free?</h1>
               <p>
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used
+                "Education is the most powerful weapon which you can use to
+                change the world." – Nelson Mandela
               </p>
               <Button>Check Out Our Courses</Button>
             </div>

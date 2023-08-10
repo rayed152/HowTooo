@@ -1,8 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./cssfiles/seconddiv.module.css";
-import { Nav, Tab, Card, Button } from "react-bootstrap";
+import { Nav, Tab, Card } from "react-bootstrap";
 
 function SecondDiv() {
+  const [expandedMap, setExpandedMap] = useState({});
+
+  const toggleExpand = (cardId) => {
+    setExpandedMap((prevExpandedMap) => ({
+      ...prevExpandedMap,
+      [cardId]: !prevExpandedMap[cardId],
+    }));
+  };
+
+  const renderCardText = (text, cardId) => {
+    const maxLength = 200;
+    const truncatedText =
+      text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+
+    if (expandedMap[cardId]) {
+      return (
+        <div>
+          <Card.Text>{text}</Card.Text>
+          <button
+            className={styles.seeMoreButton}
+            onClick={() => toggleExpand(cardId)}
+          >
+            See Less
+          </button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Card.Text>{truncatedText}</Card.Text>
+          {text.length > maxLength && (
+            <button
+              className={styles.seeMoreButton}
+              onClick={() => toggleExpand(cardId)}
+            >
+              See More
+            </button>
+          )}
+        </div>
+      );
+    }
+  };
   return (
     <div style={{ backgroundColor: "#393E46" }}>
       <div className={`text-center pb-4 pt-4 ${styles.header}`}>
@@ -19,13 +61,13 @@ function SecondDiv() {
               style={{ width: "70%" }}
             >
               <Nav.Item>
-                <Nav.Link eventKey="#card1">Card1</Nav.Link>
+                <Nav.Link eventKey="#card1">Computer Science</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="#card2">Card2</Nav.Link>
+                <Nav.Link eventKey="#card2">BBA</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="#card3">Card3</Nav.Link>
+                <Nav.Link eventKey="#card3">Maths</Nav.Link>
               </Nav.Item>
             </Nav>
             <div className="col-lg-2 d-lg-block d-none"></div>
@@ -35,14 +77,20 @@ function SecondDiv() {
             <div className="col-lg-2 d-lg-block d-none"></div>
             <Tab.Pane eventKey="#card1">
               <div id="card1" className="mt-4">
-                <h3>Card1 Content</h3>
+                <h3>Computer Science</h3>
                 <div className="row">
                   <div className="col-md-4">
                     <Card className={`${styles.cards}`}>
                       <Card.Body>
-                        <Card.Title>Card 1 - Item 1</Card.Title>
+                        <Card.Title>HTML & CSS</Card.Title>
                         <Card.Text>
-                          This is the content for Card 1 - Item 1.
+                          {renderCardText(
+                            `HTML is used for structuring web content, using tags
+                          to define headings, paragraphs, links, images, and
+                          more while CSS styles web content by specifying
+                          colors, fonts, layout, and design for HTML elements.`,
+                            "card1-item1"
+                          )}
                         </Card.Text>
                       </Card.Body>
                     </Card>
@@ -50,9 +98,18 @@ function SecondDiv() {
                   <div className="col-md-4">
                     <Card className={`${styles.cards}`}>
                       <Card.Body>
-                        <Card.Title>Card 1 - Item 2</Card.Title>
+                        <Card.Title>Python</Card.Title>
                         <Card.Text>
-                          This is the content for Card 1 - Item 2.
+                          {renderCardText(
+                            `Python is a versatile, high-level programming language
+                          known for its simplicity and readability. It offers a
+                          wide range of libraries and frameworks for various
+                          tasks, making it popular for web development, data
+                          analysis, artificial intelligence, and automation.
+                          Python's clean syntax and extensive community support
+                          contribute to its widespread use and appeal.`,
+                            "card1-item2"
+                          )}
                         </Card.Text>
                       </Card.Body>
                     </Card>
@@ -60,9 +117,19 @@ function SecondDiv() {
                   <div className="col-md-4">
                     <Card className={`${styles.cards}`}>
                       <Card.Body>
-                        <Card.Title>Card 1 - Item 3</Card.Title>
+                        <Card.Title>Java</Card.Title>
                         <Card.Text>
-                          This is the content for Card 1 - Item 3.
+                          {renderCardText(
+                            `Java is a robust, object-oriented programming language
+                          that emphasizes portability and security. It's widely
+                          used for building applications, from desktop to
+                          enterprise software. Java code runs on a virtual
+                          machine (JVM), ensuring compatibility across different
+                          platforms. Its strong ecosystem, vast libraries, and
+                          platform independence make Java a cornerstone of
+                          modern software development.`,
+                            "card1-item3"
+                          )}
                         </Card.Text>
                       </Card.Body>
                     </Card>
@@ -88,7 +155,7 @@ function SecondDiv() {
                   <div className="col-md-4">
                     <Card className={`${styles.cards}`}>
                       <Card.Body>
-                        <Card.Title>Card 2 - Item 2</Card.Title>
+                        <Card.Title>Card 2 Item 2</Card.Title>
                         <Card.Text>
                           This is the content for Card 2 - Item 2.
                         </Card.Text>
