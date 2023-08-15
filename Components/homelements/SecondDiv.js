@@ -45,6 +45,7 @@ function SecondDiv() {
       );
     }
   };
+
   return (
     <div style={{ backgroundColor: "#393E46" }}>
       <div className={`text-center pb-4 pt-4 ${styles.header}`}>
