@@ -1,0 +1,10 @@
+.dashboardContent {
+    position: relative; /* This keeps the particles and FirstDiv together */
+    width: 100%;
+    height: calc(100vh - 70px); /* Adjust the height based on your Navbar height */
+  }
+
+.footerPartition {
+    position: relative;
+    /* Example background color for the other partition */
+  }

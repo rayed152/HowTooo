@@ -1,7 +1,28 @@
 import React from "react";
+import Design from "./Animation/Design";
+import Navbar1 from "./navbars/Navbar1";
+import Footer from "./homelements/Footer";
+import FirstDiv from "./dashboardelements/FirstDiv";
+import styles from "./dashboard.module.css";
 
 function Dashboard() {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <div style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+        <Navbar1 />
+      </div>
+
+      <div className={`${styles.dashboardContent}`}>
+        <Design>
+          <FirstDiv />
+        </Design>
+      </div>
+
+      <div className={`${styles.footerPartition}`}>
+        <Footer />
+      </div>
+    </div>
+  );
 }
 
 export default Dashboard;
