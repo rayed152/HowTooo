@@ -4,6 +4,7 @@ import Navbar1 from "./navbars/Navbar1";
 import Footer from "./homelements/Footer";
 import FirstDiv from "./dashboardelements/FirstDiv";
 import styles from "./dashboard.module.css";
+import Carousel2 from "./dashboardelements/Carousel2";
 
 function Dashboard() {
   return (
@@ -14,7 +15,10 @@ function Dashboard() {
 
       <div className={`${styles.dashboardContent}`}>
         <Design>
-          <FirstDiv />
+          <div>
+            <FirstDiv />
+            <Carousel2 />
+          </div>
         </Design>
       </div>
 
