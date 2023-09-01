@@ -16,6 +16,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "react-bootstrap";
+import Link from "next/link";
 
 function Navbar1() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -82,7 +83,9 @@ function Navbar1() {
                   Resources
                 </DropdownToggle>
                 <DropdownMenu className={`${styles.navDropMenu}`}>
-                  <DropdownItem>Docs</DropdownItem>
+                  <DropdownItem>
+                    <Link href="/documentation">Docs</Link>
+                  </DropdownItem>
                   <NavDropdown.Divider />
                   <div>
                     <h6>Practices</h6>
