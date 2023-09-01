@@ -7,6 +7,11 @@ export default async function handle(req, res) {
   mongooseConnect();
 
   if (method === "GET") {
+    if (req.query?.id) {
+      res.json(await Doc.findOne({ _id: req.query.id }));
+    } else {
+      res.json(await Doc.find());
+    }
     res.json(await Doc.find());
   }
 
