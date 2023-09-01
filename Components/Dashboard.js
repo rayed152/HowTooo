@@ -5,6 +5,7 @@ import Footer from "./homelements/Footer";
 import FirstDiv from "./dashboardelements/FirstDiv";
 import styles from "./dashboard.module.css";
 import Carousel2 from "./dashboardelements/Carousel2";
+import ThirdDivDash from "./dashboardelements/ThirdDivDash";
 
 function Dashboard() {
   return (
@@ -23,6 +24,7 @@ function Dashboard() {
       </div>
 
       <div className={`${styles.footerPartition}`}>
+        <ThirdDivDash />
         <Footer />
       </div>
     </div>
