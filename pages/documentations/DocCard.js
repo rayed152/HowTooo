@@ -16,17 +16,22 @@ function DocCard() {
   return (
     <div className="flex flex-wrap">
       {docs.map((doc) => (
-        <Card key={doc.id} className="w-64 m-4">
-          {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-          <Card.Body>
-            <Card.Title>{doc.title}</Card.Title>
-            <Card.Text>{doc.summary}</Card.Text>
-            {/* <Button variant="primary">Check It Out</Button> */}
-            <Link href={"/documentations/details/" + doc._id}>
-              Check It Out
-            </Link>
-          </Card.Body>
-        </Card>
+        <Link
+          href={"/documentations/details/" + doc._id}
+          className="no-underline"
+        >
+          <Card
+            key={doc.id}
+            className="w-64 m-4 hover:transform hover:scale-110 hover:shadow-md"
+            style={{ height: "9rem" }}
+          >
+            {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+            <Card.Body>
+              <Card.Title>{doc.title}</Card.Title>
+              <Card.Text>{doc.summary}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Link>
       ))}
     </div>
   );

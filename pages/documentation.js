@@ -6,8 +6,14 @@ function documentation() {
   return (
     <div>
       <Navbar1 />
-      <h1>Documentations Of Computer Science</h1>
-      <DocCard />
+      <h1 className="text-center mt-6 underline" style={{ fontSize: "30px" }}>
+        Documentations Of Computer Science
+      </h1>
+      <div className="d-flex  flex-lg-row">
+        <div className="col-lg-2 d-lg-block d-none"></div>
+        <DocCard />
+        <div className="col-lg-2 d-lg-block d-none"></div>
+      </div>
     </div>
   );
 }

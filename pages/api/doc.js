@@ -12,7 +12,6 @@ export default async function handle(req, res) {
     } else {
       res.json(await Doc.find());
     }
-    res.json(await Doc.find());
   }
 
   if (method === "POST") {
