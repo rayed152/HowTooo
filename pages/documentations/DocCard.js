@@ -23,7 +23,7 @@ function DocCard() {
           <Card
             key={doc.id}
             className="w-64 m-4 hover:transform hover:scale-110 hover:shadow-md"
-            style={{ height: "9rem" }}
+            style={{ height: "22rem" }}
           >
             {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
             <Card.Body>

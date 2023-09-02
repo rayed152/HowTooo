@@ -2,7 +2,7 @@ import React from "react";
 import DocCard from "./documentations/DocCard";
 import Navbar1 from "@/Components/navbars/Navbar1";
 
-function documentation() {
+function documentationC() {
   return (
     <div>
       <Navbar1 />
@@ -18,4 +18,4 @@ function documentation() {
   );
 }
 
-export default documentation;
+export default documentationC;

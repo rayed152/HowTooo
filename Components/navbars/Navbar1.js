@@ -84,10 +84,7 @@ function Navbar1() {
                 </DropdownToggle>
                 <DropdownMenu className={`${styles.navDropMenu}`}>
                   <DropdownItem>
-                    <Link
-                      href="/documentation"
-                      className="no-underline text-black"
-                    >
+                    <Link href="/alldocs" className="no-underline text-black">
                       Docs
                     </Link>
                   </DropdownItem>
