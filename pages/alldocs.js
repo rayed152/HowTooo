@@ -1,10 +1,11 @@
 import Navbar1 from "@/Components/navbars/Navbar1";
 import Link from "next/link";
 import React from "react";
+import styles from "@/styles/alldocs.module.css";
 
 function alldocs() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`${styles.background} min-h-screen flex flex-col`}>
       <Navbar1 />
 
       <div className="flex-grow flex flex-col items-center justify-center">
