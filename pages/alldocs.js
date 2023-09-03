@@ -1,21 +1,33 @@
 import Navbar1 from "@/Components/navbars/Navbar1";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/alldocs.module.css";
 
 function alldocs() {
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimate(true);
+    }, 100);
+  }, []);
   return (
     <div className={`${styles.background} min-h-screen flex flex-col`}>
       <Navbar1 />
 
       <div className="flex-grow flex flex-col items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Docs</h1>
+          <h1
+            className={`text-4xl font-bold mb-4 ${
+              animate ? styles["underline-animation"] : ""
+            }`}
+          >
+            Docs
+          </h1>
           <p className="text-lg">
-            Docs is a community-driven collection of code documentation for
-            popular
-            <br /> programming languages and frameworks. Interested in helping
-            build it?
+            Documentation is a process of creating and maintaining written or
+            visual materials that provide <br />
+            information, instructions, and details about a particular subject,
+            product, process, system, or concept.
           </p>
         </div>
 

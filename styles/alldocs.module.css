@@ -4,3 +4,31 @@
     background-repeat: no-repeat;
     
   }
+
+
+@keyframes underline-animation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.underline-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; 
+  background-color: #000; 
+  transform-origin: bottom right;
+  animation: underline-animation 0.3s ease-in-out forwards;
+}
+
