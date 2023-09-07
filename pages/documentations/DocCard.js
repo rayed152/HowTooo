@@ -16,12 +16,10 @@ function DocCard() {
     });
   }, []);
 
-  // Calculate the index of the first and last document for the current page
   const indexOfLastDoc = currentPage * docsPerPage;
   const indexOfFirstDoc = indexOfLastDoc - docsPerPage;
   const currentDocs = docs.slice(indexOfFirstDoc, indexOfLastDoc);
 
-  // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
