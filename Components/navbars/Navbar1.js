@@ -134,7 +134,7 @@ function Navbar1() {
                   <DropdownItem>For Students</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
-              <Nav.Link href="#" className={`${styles.navitems}`}>
+              <Nav.Link href="#fourthdiv" className={`${styles.navitems}`}>
                 Contact Us
               </Nav.Link>
             </Nav>
