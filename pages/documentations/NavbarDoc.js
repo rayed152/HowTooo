@@ -40,7 +40,7 @@ function NavbarDoc() {
         }`}
       >
         {isOpen && (
-          <div>
+          <div style={{ maxHeight: "700px", overflowY: "scroll" }}>
             {docs.map((doc) => (
               <Link
                 href={"/documentations/details/" + doc._id}
