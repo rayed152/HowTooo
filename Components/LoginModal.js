@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { signIn } from "next-auth/react";
 import styles from "./loginmondal.module.css";
+import Link from "next/link";
 
 function LoginModal(props) {
   const handleLogin = async () => {
@@ -90,7 +91,10 @@ function LoginModal(props) {
             </div>
             <div className="text-center mt-3">
               <p>
-                Don't Have An Account? <span>Sign Up.</span>
+                Don't Have An Account?{" "}
+                <span>
+                  <Link href="/CreateProfile">Sign Up.</Link>
+                </span>
               </p>
             </div>
           </div>

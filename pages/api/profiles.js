@@ -29,7 +29,8 @@ export default async function handler(req, res) {
   }
 
   if (method === "POST") {
-    const { firstName, lastName, phone, age, address, email } = req.body;
+    const { firstName, lastName, phone, age, address, email, password } =
+      req.body;
 
     const profileDoc = await Profile.create({
       firstName,
@@ -38,6 +39,7 @@ export default async function handler(req, res) {
       age,
       address,
       email,
+      password,
     });
 
     res.json(profileDoc);

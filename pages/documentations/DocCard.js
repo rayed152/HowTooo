@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Link from "next/link";
-import Pagination from "react-bootstrap/Pagination";
-import Container from "react-bootstrap/Container";
+// import Link from "next/link";
 
-function DocCard() {
+function DocCard({ searchTerm }) {
   const [docs, setDocs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [docsPerPage] = useState(4); // Number of cards per page
@@ -16,16 +13,21 @@ function DocCard() {
     });
   }, []);
 
+  // Filter documents based on search term
+  const filteredDocs = docs.filter((doc) =>
+    doc.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const indexOfLastDoc = currentPage * docsPerPage;
   const indexOfFirstDoc = indexOfLastDoc - docsPerPage;
-  const currentDocs = docs.slice(indexOfFirstDoc, indexOfLastDoc);
+  const currentDocs = filteredDocs.slice(indexOfFirstDoc, indexOfLastDoc);
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
   const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(docs.length / docsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(filteredDocs.length / docsPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -33,46 +35,75 @@ function DocCard() {
     <div>
       <div className="flex flex-wrap">
         {currentDocs.map((doc) => (
-          <Link
+          <a
             href={"/documentations/details/" + doc._id}
             className="no-underline"
           >
-            <Card
+            <div
               key={doc.id}
               className="w-64 m-4 hover:transform hover:scale-110 hover:shadow-md hover:bg-gray-500 hover:text-white"
-              style={{ height: "22rem" }}
             >
-              <Card.Body>
-                <Card.Title>{doc.title}</Card.Title>
-                <Card.Text>{doc.summary}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Link>
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">{doc.title}</h5>
+                  <p className="card-text">{doc.summary}</p>
+                </div>
+              </div>
+            </div>
+          </a>
         ))}
       </div>
-      <Container className="d-flex justify-content-center">
-        <Pagination>
-          <Pagination.First onClick={() => paginate(1)} />
-          <Pagination.Prev
-            onClick={() => paginate(currentPage - 1)}
-            disabled={currentPage === 1}
-          />
-          {pageNumbers.map((number) => (
-            <Pagination.Item
-              key={number}
-              active={number === currentPage}
-              onClick={() => paginate(number)}
+      <div className="d-flex justify-content-center">
+        <ul className="pagination">
+          <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+            <button className="page-link" onClick={() => paginate(1)}>
+              First
+            </button>
+          </li>
+          <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+            <button
+              className="page-link"
+              onClick={() => paginate(currentPage - 1)}
             >
-              {number}
-            </Pagination.Item>
+              Prev
+            </button>
+          </li>
+          {pageNumbers.map((number) => (
+            <li
+              key={number}
+              className={`page-item ${number === currentPage ? "active" : ""}`}
+            >
+              <button className="page-link" onClick={() => paginate(number)}>
+                {number}
+              </button>
+            </li>
           ))}
-          <Pagination.Next
-            onClick={() => paginate(currentPage + 1)}
-            disabled={currentPage === pageNumbers.length}
-          />
-          <Pagination.Last onClick={() => paginate(pageNumbers.length)} />
-        </Pagination>
-      </Container>
+          <li
+            className={`page-item ${
+              currentPage === pageNumbers.length ? "disabled" : ""
+            }`}
+          >
+            <button
+              className="page-link"
+              onClick={() => paginate(currentPage + 1)}
+            >
+              Next
+            </button>
+          </li>
+          <li
+            className={`page-item ${
+              currentPage === pageNumbers.length ? "disabled" : ""
+            }`}
+          >
+            <button
+              className="page-link"
+              onClick={() => paginate(pageNumbers.length)}
+            >
+              Last
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ const ProfileSchema = new Schema({
   age: Number,
   email: { type: String, required: true },
   address: String,
+  password: String,
 });
 
 export const Profile = models.Profile || model("Profile", ProfileSchema);
