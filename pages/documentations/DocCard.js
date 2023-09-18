@@ -43,7 +43,7 @@ function DocCard({ searchTerm }) {
               key={doc.id}
               className="w-64 m-4 hover:transform hover:scale-110 hover:shadow-md hover:bg-gray-500 hover:text-white"
             >
-              <div className="card">
+              <div className="card" style={{ height: "380px" }}>
                 <div className="card-body">
                   <h5 className="card-title">{doc.title}</h5>
                   <p className="card-text">{doc.summary}</p>
@@ -53,6 +53,8 @@ function DocCard({ searchTerm }) {
           </a>
         ))}
       </div>
+
+      {/* Pagination */}
       <div className="d-flex justify-content-center">
         <ul className="pagination">
           <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
