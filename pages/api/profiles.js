@@ -1,5 +1,6 @@
 import { Profile } from "@/models/Profile";
 import { mongooseConnect } from "@/lib/mongoose";
+import bcrypt from "bcryptjs";
 
 export default async function handler(req, res) {
   // Connect to the database
@@ -32,6 +33,9 @@ export default async function handler(req, res) {
     const { firstName, lastName, phone, age, address, email, password } =
       req.body;
 
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     const profileDoc = await Profile.create({
       firstName,
       lastName,
@@ -39,7 +43,7 @@ export default async function handler(req, res) {
       age,
       address,
       email,
-      password,
+      password: hashedPassword, // Save the hashed password
     });
 
     res.json(profileDoc);

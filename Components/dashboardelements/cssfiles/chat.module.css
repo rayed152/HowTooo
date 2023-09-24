@@ -1,0 +1,18 @@
+.chatButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.modalContainer {
+  position: fixed;
+  bottom: 100px; /* Adjust the bottom spacing to avoid overlapping with other sticky elements */
+  right: 20px;
+  z-index: 1050; /* Ensure it's above other Bootstrap modals */
+}
+
+.chatButtonContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
