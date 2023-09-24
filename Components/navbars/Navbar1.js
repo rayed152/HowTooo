@@ -17,6 +17,7 @@ import {
   DropdownItem,
 } from "react-bootstrap";
 import Link from "next/link";
+import Chat from "../dashboardelements/chat";
 
 function Navbar1() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -134,7 +135,7 @@ function Navbar1() {
                   <DropdownItem>For Students</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
-              <Nav.Link href="#fourthdiv" className={`${styles.navitems}`}>
+              <Nav.Link href="/ContactUs" className={`${styles.navitems}`}>
                 Contact Us
               </Nav.Link>
             </Nav>
@@ -158,6 +159,7 @@ function Navbar1() {
               </Nav.Link>
             ) : (
               <div className={`${styles.userMainDiv}`}>
+                <Chat />
                 <div>
                   <Image
                     src={session.user.image}

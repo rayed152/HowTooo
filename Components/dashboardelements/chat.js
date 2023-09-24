@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
 import styles from "@/Components/dashboardelements/cssfiles/chat.module.css"; // Adjust the path to your CSS file
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Chat = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,7 +25,7 @@ const Chat = () => {
     <>
       <div className={`chatButtonContainer ${styles.chatButton}`}>
         <button className="btn btn-primary" onClick={handleShow}>
-          Open Chat
+          <FontAwesomeIcon icon={faMessage} />
         </button>
       </div>
 

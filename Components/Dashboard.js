@@ -6,7 +6,6 @@ import FirstDiv from "./dashboardelements/FirstDiv";
 import styles from "./dashboard.module.css";
 import Carousel2 from "./dashboardelements/Carousel2";
 import ThirdDivDash from "./dashboardelements/ThirdDivDash";
-import Chat from "./dashboardelements/chat";
 
 function Dashboard() {
   return (
@@ -23,8 +22,6 @@ function Dashboard() {
           </div>
         </Design>
       </div>
-
-      <Chat />
 
       <div className={`${styles.footerPartition}`}>
         <ThirdDivDash />
