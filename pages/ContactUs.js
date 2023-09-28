@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import Image from "next/image";
 import axios from "axios";
 import Navbar1 from "@/Components/navbars/Navbar1";
+import SimpleFooter from "@/Components/SimpleFooter";
 
 function ContactUs() {
   const [email, setEmail] = useState("");
@@ -16,7 +16,9 @@ function ContactUs() {
   }
 
   return (
-    <div>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <Navbar1 />
       <div></div>
       <h1 className="text-center mt-5">
@@ -69,6 +71,9 @@ function ContactUs() {
           </Form>
         </div>
         <div className="col-lg-1 d-lg-block d-none"></div>
+      </div>
+      <div style={{ marginTop: "auto" }}>
+        <SimpleFooter />
       </div>
     </div>
   );
