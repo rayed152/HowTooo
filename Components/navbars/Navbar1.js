@@ -51,7 +51,14 @@ function Navbar1() {
                   Catalog
                 </DropdownToggle>
                 <DropdownMenu className={`${styles.navDropMenu}`}>
-                  <DropdownItem>Courses</DropdownItem>
+                  <DropdownItem>
+                    <Link
+                      href="/allmatcourses"
+                      className="no-underline text-black"
+                    >
+                      Courses
+                    </Link>
+                  </DropdownItem>
                   <NavDropdown.Divider />
                   <div>
                     <h6>Popular Courses</h6>
@@ -95,7 +102,11 @@ function Navbar1() {
                   </div>
                   <DropdownItem>Projects</DropdownItem>
                   <DropdownItem>Code Challanges</DropdownItem>
-                  <DropdownItem>Videos</DropdownItem>
+                  <DropdownItem>
+                    <Link href="/videos" className="no-underline text-black">
+                      Videos
+                    </Link>
+                  </DropdownItem>
                   <NavDropdown.Divider />
                   <div>
                     <h6>Inspirations</h6>
