@@ -53,7 +53,7 @@ function Navbar1() {
                 <DropdownMenu className={`${styles.navDropMenu}`}>
                   <DropdownItem>
                     <Link
-                      href="/allmatcourses"
+                      href="/allcourses"
                       className="no-underline text-black"
                     >
                       Courses
@@ -126,7 +126,9 @@ function Navbar1() {
                   Community
                 </DropdownToggle>
                 <DropdownMenu className={`${styles.navDropMenuNoWidth}`}>
-                  <DropdownItem>Forums</DropdownItem>
+                  <DropdownItem>
+                    <Link href="/Forum"> Forums </Link>
+                  </DropdownItem>
                   <DropdownItem>Discord</DropdownItem>
                   <DropdownItem>Team</DropdownItem>
                 </DropdownMenu>
